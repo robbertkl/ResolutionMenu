@@ -1,0 +1,9 @@
+
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "8kF-7N-MP6"; */
+"8kF-7N-MP6.title" = "Stop";
+
+/* Class = "NSMenuItem"; title = "Displays Preferences..."; ObjectID = "Xvc-HB-NT8"; */
+"Xvc-HB-NT8.title" = "Beeldschermvoorkeuren...";
+
+/* Class = "NSMenuItem"; title = "Start at Login"; ObjectID = "bbU-7L-Kmv"; */
+"bbU-7L-Kmv.title" = "Start na inloggen";

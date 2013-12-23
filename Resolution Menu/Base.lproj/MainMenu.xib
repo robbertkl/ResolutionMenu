@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="494" customClass="AppDelegate">
+            <connections>
+                <outlet property="menu" destination="Lh2-Ft-1cL" id="yZj-Z1-8VX"/>
+            </connections>
+        </customObject>
+        <customObject id="Bmm-Fk-85g" userLabel="StartAtLoginController" customClass="StartAtLoginController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="nl.lapulapu.Resolution-Menu-Helper"/>
+            </userDefinedRuntimeAttributes>
+        </customObject>
+        <menu id="Lh2-Ft-1cL">
+            <items>
+                <menuItem isSeparatorItem="YES" id="a0I-4t-ney"/>
+                <menuItem title="Start at Login" id="bbU-7L-Kmv">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <binding destination="Bmm-Fk-85g" name="value" keyPath="startAtLogin" id="bmR-io-qnw"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Displays Preferences..." id="Xvc-HB-NT8">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openDisplayPreferences:" target="494" id="qdm-EK-rJk"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="f5F-kD-5OR"/>
+                <menuItem title="Quit" id="8kF-7N-MP6">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="terminate:" target="-3" id="76m-tk-Of3"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <connections>
+                <outlet property="delegate" destination="494" id="zbA-eZ-qxJ"/>
+            </connections>
+        </menu>
+    </objects>
+</document>
