@@ -8,7 +8,7 @@ Simple OS X status bar menu app to switch display modes / resolutions, with supp
 
 * No color depth information is shown; if a resolution is available with different color depths, only the display mode with the highest color depth will be used.
 
-* `CoreGraphics` private APIs are used to access the HiDPI display modes; this might not get this app accepted into the Mac App Store. Also note that `CGDisplayIOServicePort()`, which is used to get to get the (localized) name of the displays, has been deprecated as of Mac OS X 10.9 (Mavericks).
+* `CoreGraphics` private APIs are used to access the HiDPI display modes; this might not get this app accepted into the Mac App Store. Also note that `CGDisplayIOServicePort()`, which is used to get the (localized) name of the displays, has been deprecated as of Mac OS X 10.9 (Mavericks).
 
 * To facilitate "Start at Login", the `ServiceManagement.framework` is used together with a helper app, which should work in a sandboxed environment as well (as long as the app lives in /Applications).
 
