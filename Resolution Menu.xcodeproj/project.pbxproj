@@ -20,6 +20,16 @@
 		5E8C385218686A93005DB360 /* DisplayModeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C385118686A93005DB360 /* DisplayModeMenuItem.m */; };
 		5E8C385418686CF1005DB360 /* Resolution Menu Helper.app in Copy Helper App */ = {isa = PBXBuildFile; fileRef = 5E8C381E1868699D005DB360 /* Resolution Menu Helper.app */; };
 		5E8C385718689518005DB360 /* StartAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C385618689518005DB360 /* StartAtLoginController.m */; };
+		ED523250189D459C0004E608 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = ED52324F189D459C0004E608 /* main.mm */; };
+		ED523254189D459C0004E608 /* resolution_cli.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = ED523253189D459C0004E608 /* resolution_cli.1 */; };
+		ED523258189D58AB0004E608 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8C38161868690F005DB360 /* IOKit.framework */; };
+		ED523261189D5A350004E608 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8C381818686914005DB360 /* ServiceManagement.framework */; };
+		ED523262189D5A3A0004E608 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8C37E2186868E5005DB360 /* Cocoa.framework */; };
+		ED523263189D5AF80004E608 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED52325D189D59570004E608 /* CoreGraphics.framework */; };
+		ED523265189D5AFF0004E608 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED523264189D5AFF0004E608 /* Quartz.framework */; };
+		ED523266189D5C440004E608 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED523264189D5AFF0004E608 /* Quartz.framework */; };
+		ED523268189D5C530004E608 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED523267189D5C530004E608 /* QuartzCore.framework */; };
+		ED523269189D5C6F0004E608 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED523259189D59330004E608 /* ApplicationServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +43,16 @@
 			);
 			name = "Copy Helper App";
 			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED523249189D459C0004E608 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				ED523254189D459C0004E608 /* resolution_cli.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -57,6 +77,15 @@
 		5E8C385118686A93005DB360 /* DisplayModeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayModeMenuItem.m; sourceTree = "<group>"; };
 		5E8C385518689518005DB360 /* StartAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartAtLoginController.h; sourceTree = "<group>"; };
 		5E8C385618689518005DB360 /* StartAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartAtLoginController.m; sourceTree = "<group>"; };
+		ED52324B189D459C0004E608 /* resolution-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "resolution-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED52324C189D459C0004E608 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ED52324F189D459C0004E608 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		ED523252189D459C0004E608 /* resolution-cli-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "resolution-cli-Prefix.pch"; sourceTree = "<group>"; };
+		ED523253189D459C0004E608 /* resolution_cli.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = resolution_cli.1; sourceTree = "<group>"; };
+		ED523259189D59330004E608 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		ED52325D189D59570004E608 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ED523264189D5AFF0004E608 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		ED523267189D5C530004E608 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED523265189D5AFF0004E608 /* Quartz.framework in Frameworks */,
+				ED523263189D5AF80004E608 /* CoreGraphics.framework in Frameworks */,
 				5E8C37E3186868E5005DB360 /* Cocoa.framework in Frameworks */,
 				5E8C38171868690F005DB360 /* IOKit.framework in Frameworks */,
 				5E8C381918686914005DB360 /* ServiceManagement.framework in Frameworks */,
@@ -78,6 +109,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED523248189D459C0004E608 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED523269189D5C6F0004E608 /* ApplicationServices.framework in Frameworks */,
+				ED523268189D5C530004E608 /* QuartzCore.framework in Frameworks */,
+				ED523266189D5C440004E608 /* Quartz.framework in Frameworks */,
+				ED523262189D5A3A0004E608 /* Cocoa.framework in Frameworks */,
+				ED523261189D5A350004E608 /* ServiceManagement.framework in Frameworks */,
+				ED523258189D58AB0004E608 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +130,7 @@
 			children = (
 				5E8C37E8186868E5005DB360 /* Resolution Menu */,
 				5E8C38241868699D005DB360 /* Resolution Menu Helper */,
+				ED52324E189D459C0004E608 /* resolution-cli */,
 				5E8C37E1186868E5005DB360 /* Frameworks */,
 				5E8C37E0186868E5005DB360 /* Products */,
 			);
@@ -96,6 +141,7 @@
 			children = (
 				5E8C37DF186868E5005DB360 /* Resolution Menu.app */,
 				5E8C381E1868699D005DB360 /* Resolution Menu Helper.app */,
+				ED52324B189D459C0004E608 /* resolution-cli */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,9 +149,14 @@
 		5E8C37E1186868E5005DB360 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED523267189D5C530004E608 /* QuartzCore.framework */,
+				ED523264189D5AFF0004E608 /* Quartz.framework */,
+				ED52325D189D59570004E608 /* CoreGraphics.framework */,
+				ED523259189D59330004E608 /* ApplicationServices.framework */,
 				5E8C37E2186868E5005DB360 /* Cocoa.framework */,
 				5E8C38161868690F005DB360 /* IOKit.framework */,
 				5E8C381818686914005DB360 /* ServiceManagement.framework */,
+				ED52324C189D459C0004E608 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +187,24 @@
 				5E8C382A1868699D005DB360 /* main.m */,
 			);
 			path = "Resolution Menu Helper";
+			sourceTree = "<group>";
+		};
+		ED52324E189D459C0004E608 /* resolution-cli */ = {
+			isa = PBXGroup;
+			children = (
+				ED52324F189D459C0004E608 /* main.mm */,
+				ED523253189D459C0004E608 /* resolution_cli.1 */,
+				ED523251189D459C0004E608 /* Supporting Files */,
+			);
+			path = "resolution-cli";
+			sourceTree = "<group>";
+		};
+		ED523251189D459C0004E608 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED523252189D459C0004E608 /* resolution-cli-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +245,23 @@
 			productReference = 5E8C381E1868699D005DB360 /* Resolution Menu Helper.app */;
 			productType = "com.apple.product-type.application";
 		};
+		ED52324A189D459C0004E608 /* resolution-cli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED523257189D459C0004E608 /* Build configuration list for PBXNativeTarget "resolution-cli" */;
+			buildPhases = (
+				ED523247189D459C0004E608 /* Sources */,
+				ED523248189D459C0004E608 /* Frameworks */,
+				ED523249189D459C0004E608 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "resolution-cli";
+			productName = "resolution-cli";
+			productReference = ED52324B189D459C0004E608 /* resolution-cli */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,6 +286,7 @@
 			targets = (
 				5E8C37DE186868E5005DB360 /* Resolution Menu */,
 				5E8C381D1868699D005DB360 /* Resolution Menu Helper */,
+				ED52324A189D459C0004E608 /* resolution-cli */,
 			);
 		};
 /* End PBXProject section */
@@ -241,6 +328,14 @@
 			files = (
 				5E8C38321868699D005DB360 /* AppDelegate.m in Sources */,
 				5E8C382B1868699D005DB360 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED523247189D459C0004E608 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED523250189D459C0004E608 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +467,34 @@
 			};
 			name = Release;
 		};
+		ED523255189D459C0004E608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "resolution-cli/resolution-cli-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED523256189D459C0004E608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "resolution-cli/resolution-cli-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -401,6 +524,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		ED523257189D459C0004E608 /* Build configuration list for PBXNativeTarget "resolution-cli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED523255189D459C0004E608 /* Debug */,
+				ED523256189D459C0004E608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
