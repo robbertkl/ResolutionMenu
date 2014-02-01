@@ -2,7 +2,7 @@
 //  main.m
 //  resolution-cli
 //
-//  Created by Ant on 01/02/2014.
+//  Created by Anthony Dervish on 01/02/2014.
 //  Copyright (c) 2014 Robbert Klarenbeek. All rights reserved.
 //
 
@@ -11,8 +11,6 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include <map>
-#include <tuple>
 #include <utility>
 #include <memory>
 #include <iomanip>
@@ -21,6 +19,7 @@
 #include <algorithm>
 #include <libgen.h> // For basename
 using namespace std;
+
 
 struct DisplayMode
 {
@@ -74,10 +73,20 @@ struct DisplayMode
         return os;
     };
 };
-using DisplayID = CGDirectDisplayID;
+
 using DisplayModes = set<DisplayMode>;
-using DisplayInfo = pair<string,DisplayModes>;
-using DisplayToDisplayInfo = map<DisplayID, DisplayInfo>;
+using DisplayID = CGDirectDisplayID;
+
+struct DisplayInfo
+{
+    DisplayID displayID;
+    string name;
+    DisplayModes displayModes;
+    DisplayInfo(DisplayID displayID, string name, DisplayModes displayModes) :
+    displayID(displayID), name(move(name)), displayModes(move(displayModes)) {;}
+};
+
+using DisplayToDisplayInfo = vector<DisplayInfo>;
 
 
 /*
@@ -121,12 +130,25 @@ void CGSGetDisplayModeDescriptionOfLength(CGDirectDisplayID display, int idx, CG
 
 void usage(const char* binary) {
     string binaryName(basename((char*)binary));
-    cout << binaryName << ": " << "Change the screen resolution" << endl << endl
-    << " Usage: " << binaryName << " <command> [<argument>]" << endl
+    cout << binaryName << ": " << "Change the screen resolution on OS X" << endl << endl
+    << " Usage: " << binaryName << " <command> [<argument> <argument>]" << endl
     << R"(
     Commands:
         list - list the available resolutions
-        set <resolution> - set the resolution
+        set <display-index> <resolution> - set the resolution
+    
+    <resolution> can be specified in several ways, and an underscore can be used
+    anywhere a number might be used meaning 'match anything' in a search from highest-
+    resolution to lowest resolution.
+    
+    Examples for <resolution>:
+        1920x1080@32h = display mode size 1920x1080, 32 bit colour, HiDPI
+        2560      = first mode with 2560 width
+        1920x1080 = first mode with size 1920x1080
+        _x900     = first mode with height 900
+        _x_@16    = first mode with 16-bit colour
+        h         = first HiDPI mode
+        _         = Highest resolution mode -- often the default
     )" << endl;
 }
 
@@ -171,18 +193,19 @@ DisplayToDisplayInfo getDisplayModes() {
                 );
                 
             }
-            sDisplayInfo->emplace(make_pair(display, make_pair(displayName.UTF8String,displayModes)));
+            sDisplayInfo->emplace_back(display, string(displayName.UTF8String), displayModes);
         }
     }
     return *sDisplayInfo;
 }
 void listDisplayModes() {
     DisplayToDisplayInfo displayInfo(getDisplayModes());
-    for (auto displayItem : displayInfo) {
-        cout << displayItem.second.first << endl;
-        for ( const DisplayMode& info : displayItem.second.second ) {
+    for (size_t idx = 0; idx < displayInfo.size(); ++idx ) {
+        cout << idx << ": " << displayInfo[idx].name << endl;
+        for ( const DisplayMode& info : displayInfo[idx].displayModes ) {
             cout << info << endl;
         }
+        cout << endl;
     }
     
 }
@@ -243,21 +266,22 @@ int main(int argc, const char * argv[])
         }
         
         if (string("set") == argv[1]) {
-            if (argc<3) {
-                cerr << "Must supply a resolution to 'set' command" << endl;
+            if (argc<4) {
+                cerr << "Must supply a display and resolution to 'set' command" << endl;
                 usage(argv[0]);
                 exit(1);
             }
-            DisplayMode selectedMode(displayModeFromString(argv[2]));
+            size_t selectedDisplayIdx(stod(argv[2]));
+            DisplayMode selectedMode(displayModeFromString(argv[3]));
             
-            DisplayID selectedDisplayID(displayModes.begin()->first);
-            DisplayInfo infoForSelectedDisplay(displayModes.begin()->second);
-            DisplayModes modesForSelectedDisplay(infoForSelectedDisplay.second);
+            DisplayInfo infoForSelectedDisplay(displayModes[selectedDisplayIdx]);
+            DisplayID selectedDisplayID(infoForSelectedDisplay.displayID);
+            DisplayModes modesForSelectedDisplay(infoForSelectedDisplay.displayModes);
             auto modeItr = find_if(modesForSelectedDisplay.rbegin()
                     ,modesForSelectedDisplay.rend()
                     ,[&selectedMode](const DisplayMode&displayMode){return displayMode.matches(selectedMode);});
             if (modeItr != modesForSelectedDisplay.rend()) {
-                cout << "Switching to mode " << *modeItr << endl;
+                cout << "Switching display '" << infoForSelectedDisplay.name << "' (" << selectedDisplayIdx << ") to mode " << *modeItr << endl;
                 changeDisplayMode(selectedDisplayID, (int)modeItr->modeNumber);
             }
             else {
@@ -268,8 +292,13 @@ int main(int argc, const char * argv[])
         else if (string("list") == argv[1]) {
             listDisplayModes();
         }
+        else {
+            cerr << "Unknown command '" << argv[1] << "'" << endl;
+            usage(argv[0]);
+            exit(1);
+        }
         
-    }
+    } // autoreleasepool
     return 0;
 }
 

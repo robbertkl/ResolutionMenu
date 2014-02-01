@@ -25,11 +25,6 @@
 		ED523258189D58AB0004E608 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8C38161868690F005DB360 /* IOKit.framework */; };
 		ED523261189D5A350004E608 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8C381818686914005DB360 /* ServiceManagement.framework */; };
 		ED523262189D5A3A0004E608 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8C37E2186868E5005DB360 /* Cocoa.framework */; };
-		ED523263189D5AF80004E608 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED52325D189D59570004E608 /* CoreGraphics.framework */; };
-		ED523265189D5AFF0004E608 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED523264189D5AFF0004E608 /* Quartz.framework */; };
-		ED523266189D5C440004E608 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED523264189D5AFF0004E608 /* Quartz.framework */; };
-		ED523268189D5C530004E608 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED523267189D5C530004E608 /* QuartzCore.framework */; };
-		ED523269189D5C6F0004E608 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED523259189D59330004E608 /* ApplicationServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,10 +77,6 @@
 		ED52324F189D459C0004E608 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		ED523252189D459C0004E608 /* resolution-cli-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "resolution-cli-Prefix.pch"; sourceTree = "<group>"; };
 		ED523253189D459C0004E608 /* resolution_cli.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = resolution_cli.1; sourceTree = "<group>"; };
-		ED523259189D59330004E608 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
-		ED52325D189D59570004E608 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		ED523264189D5AFF0004E608 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		ED523267189D5C530004E608 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED523265189D5AFF0004E608 /* Quartz.framework in Frameworks */,
-				ED523263189D5AF80004E608 /* CoreGraphics.framework in Frameworks */,
 				5E8C37E3186868E5005DB360 /* Cocoa.framework in Frameworks */,
 				5E8C38171868690F005DB360 /* IOKit.framework in Frameworks */,
 				5E8C381918686914005DB360 /* ServiceManagement.framework in Frameworks */,
@@ -113,9 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED523269189D5C6F0004E608 /* ApplicationServices.framework in Frameworks */,
-				ED523268189D5C530004E608 /* QuartzCore.framework in Frameworks */,
-				ED523266189D5C440004E608 /* Quartz.framework in Frameworks */,
 				ED523262189D5A3A0004E608 /* Cocoa.framework in Frameworks */,
 				ED523261189D5A350004E608 /* ServiceManagement.framework in Frameworks */,
 				ED523258189D58AB0004E608 /* IOKit.framework in Frameworks */,
@@ -149,10 +135,6 @@
 		5E8C37E1186868E5005DB360 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ED523267189D5C530004E608 /* QuartzCore.framework */,
-				ED523264189D5AFF0004E608 /* Quartz.framework */,
-				ED52325D189D59570004E608 /* CoreGraphics.framework */,
-				ED523259189D59330004E608 /* ApplicationServices.framework */,
 				5E8C37E2186868E5005DB360 /* Cocoa.framework */,
 				5E8C38161868690F005DB360 /* IOKit.framework */,
 				5E8C381818686914005DB360 /* ServiceManagement.framework */,
@@ -532,6 +514,7 @@
 				ED523256189D459C0004E608 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
