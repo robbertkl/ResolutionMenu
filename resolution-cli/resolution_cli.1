@@ -1,0 +1,50 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "RESOLUTION\-CLI" "1" "February 2014" "" ""
+.
+.SH "NAME"
+\fBresolution\-cli\fR \- change the screen resolution on OS X
+.
+.SH "SYNOPSIS"
+\fBresolution\-cli\fR \fIcommand\fR [\fIargument\fR \fIargument\fR]
+.
+.SH "COMMANDS"
+.
+.TP
+\fBlist\fR
+list the available resolutions
+.
+.TP
+\fBset\fR \fIdisplay\-index\fR \fIresolution\fR
+set the resolution
+.
+.SH "SYNTAX"
+\fIresolution\fR can be specified in several ways, and an underscore can be used anywhere a number might be used meaning \'match anything\' in a search from highest\- resolution to lowest resolution\.
+.
+.SH "EXAMPLES"
+Examples for \fIresolution\fR:
+.
+.IP "\(bu" 4
+\fB1920x1080@32h\fR = display mode size 1920x1080, 32 bit colour, HiDPI
+.
+.IP "\(bu" 4
+\fB2560\fR = first mode with 2560 width
+.
+.IP "\(bu" 4
+\fB1920x1080\fR = first mode with size 1920x1080
+.
+.IP "\(bu" 4
+\fB_x900\fR = first mode with height 900
+.
+.IP "\(bu" 4
+\fB_x_@16\fR = first mode with 16\-bit colour
+.
+.IP "\(bu" 4
+\fBh\fR = first HiDPI mode
+.
+.IP "\(bu" 4
+\fB_\fR = Highest resolution mode \-\- often the default
+.
+.IP "" 0
+
