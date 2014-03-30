@@ -12,6 +12,8 @@ Simple OS X status bar menu app to switch display modes / resolutions, with supp
 
 * To facilitate "Start at Login", the `ServiceManagement.framework` is used together with a helper app, which should work in a sandboxed environment as well (as long as the app lives in /Applications).
 
+For a command line utility with the same functionality, check out [antmd/resolution-cli](https://github.com/antmd/resolution-cli/).
+
 ## Enabling HiDPI display modes
 
 To enable HiDPI modes on a non-retina device, execute this in the Terminal app:
