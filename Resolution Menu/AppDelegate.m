@@ -10,16 +10,16 @@
 #import "DisplayModeMenuItem.h"
 #import <IOKit/graphics/IOGraphicsLib.h>
 
+static NSString *const kStatusMenuTemplateName = @"StatusMenuTemplate";
+
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Add the menu from our NIB (self.menu) to the system status bar
-    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    [self.statusItem setMenu:self.menu];
-    [self.statusItem setImage:[NSImage imageNamed:@"MenuIcon"]];
-    [self.statusItem setAlternateImage:[NSImage imageNamed:@"MenuIconAlternate"]];
-    [self.statusItem setHighlightMode:YES];
+    _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    _statusItem.menu = self.menu;
+    _statusItem.image = [NSImage imageNamed:kStatusMenuTemplateName];
+    _statusItem.highlightMode = YES;
 }
 
 - (void)dealloc

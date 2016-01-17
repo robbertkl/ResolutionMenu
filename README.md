@@ -40,6 +40,8 @@ You might need to disable OS X Gatekeeper to run it: *System Preferences* > *Sec
 
 * Thanks to [ExitMothership](http://exitmothership.deviantart.com) for his [LED Cinema Display Icon](http://exitmothership.deviantart.com/art/LED-Cinema-Display-Icon-331815542), which is used for the app icon.
 
+* The [vector drawing used for the status menu icon](Graphics/StatusMenuTemplate.eps) was made by [Elegant Themes](http://www.flaticon.com/authors/elegant-themes) from [Flaticon](http://www.flaticon.com).
+
 ## License
 
 Resolution Menu is published under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
