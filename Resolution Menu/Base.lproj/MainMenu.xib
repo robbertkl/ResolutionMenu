@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment defaultVersion="1080" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
             <connections>
-                <outlet property="delegate" destination="494" id="495"/>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <customObject id="494" customClass="AppDelegate">
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="menu" destination="Lh2-Ft-1cL" id="yZj-Z1-8VX"/>
+                <outlet property="menu" destination="uKb-bC-Sz1" id="CBT-oX-yjW"/>
             </connections>
         </customObject>
-        <customObject id="Bmm-Fk-85g" userLabel="StartAtLoginController" customClass="StartAtLoginController">
+        <customObject id="oTT-0k-1vp" userLabel="StartAtLoginController" customClass="StartAtLoginController">
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="nl.lapulapu.Resolution-Menu-Helper"/>
             </userDefinedRuntimeAttributes>
         </customObject>
-        <menu id="Lh2-Ft-1cL">
+        <menu id="uKb-bC-Sz1">
             <items>
-                <menuItem isSeparatorItem="YES" id="a0I-4t-ney"/>
-                <menuItem title="Start at Login" id="bbU-7L-Kmv">
+                <menuItem isSeparatorItem="YES" id="4Dm-wd-xmI"/>
+                <menuItem title="Start at Login" id="YGN-5z-koN">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <binding destination="Bmm-Fk-85g" name="value" keyPath="startAtLogin" id="bmR-io-qnw"/>
+                        <binding destination="oTT-0k-1vp" name="value" keyPath="startAtLogin" id="HQs-oo-Kd1"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Displays Preferences..." id="Xvc-HB-NT8">
+                <menuItem title="Displays Preferences..." id="E2S-ww-HTf">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="openDisplayPreferences:" target="494" id="qdm-EK-rJk"/>
+                        <action selector="openDisplayPreferences:" target="Voe-Tx-rLC" id="CFf-99-aHG"/>
                     </connections>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="f5F-kD-5OR"/>
-                <menuItem title="Quit" id="8kF-7N-MP6">
+                <menuItem isSeparatorItem="YES" id="bjr-kR-h9l"/>
+                <menuItem title="Quit" id="dI2-Iz-0V9">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="terminate:" target="-3" id="76m-tk-Of3"/>
+                        <action selector="terminate:" target="-2" id="Bv5-Jw-9jY"/>
                     </connections>
                 </menuItem>
             </items>
             <connections>
-                <outlet property="delegate" destination="494" id="zbA-eZ-qxJ"/>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="Iih-ov-PaD"/>
             </connections>
         </menu>
     </objects>

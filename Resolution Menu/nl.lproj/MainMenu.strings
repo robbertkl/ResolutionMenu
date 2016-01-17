@@ -1,9 +1,9 @@
 
-/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "8kF-7N-MP6"; */
-"8kF-7N-MP6.title" = "Stop";
+/* Class = "NSMenuItem"; title = "Displays Preferences..."; ObjectID = "E2S-ww-HTf"; */
+"E2S-ww-HTf.title" = "Beeldschermvoorkeuren...";
 
-/* Class = "NSMenuItem"; title = "Displays Preferences..."; ObjectID = "Xvc-HB-NT8"; */
-"Xvc-HB-NT8.title" = "Beeldschermvoorkeuren...";
+/* Class = "NSMenuItem"; title = "Start at Login"; ObjectID = "YGN-5z-koN"; */
+"YGN-5z-koN.title" = "Start na inloggen";
 
-/* Class = "NSMenuItem"; title = "Start at Login"; ObjectID = "bbU-7L-Kmv"; */
-"bbU-7L-Kmv.title" = "Start na inloggen";
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "dI2-Iz-0V9"; */
+"dI2-Iz-0V9.title" = "Stop";
