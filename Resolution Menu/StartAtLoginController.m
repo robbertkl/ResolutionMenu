@@ -65,6 +65,8 @@
 #endif
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (BOOL)startAtLogin {
     if (!_identifier)
         return NO;
@@ -92,6 +94,7 @@
     
     return isEnabled;
 }
+#pragma clang diagnostic pop
 
 - (void)setStartAtLogin:(BOOL)flag {
     if (!_identifier)
