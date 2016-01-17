@@ -16,3 +16,4 @@
 - (IBAction)openDisplayPreferences:(id)sender;
 
 @end
+

@@ -48,8 +48,8 @@
     
     // Loop through all displays (max 16)
     uint32_t numberOfDisplays;
-	CGDirectDisplayID displays[16];
-	CGGetOnlineDisplayList(sizeof(displays) / sizeof(displays[0]), displays, &numberOfDisplays);
+    CGDirectDisplayID displays[16];
+    CGGetOnlineDisplayList(sizeof(displays) / sizeof(displays[0]), displays, &numberOfDisplays);
     for (int i = 0; i < numberOfDisplays; i++) {
         CGDirectDisplayID display = displays[i];
         
