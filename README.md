@@ -1,5 +1,7 @@
 # Resolution Menu
 
+<img src="Graphics/Screenshot.jpg" align="right" width="40%">
+
 Simple OS X status bar menu app to switch display modes / resolutions, with support for HiDPI (retina) modes.
 
 * For quick access, if you have 1 display only, the display modes can be found at the top level of the menu. For 2 or more displays, each display will have its own submenu.
