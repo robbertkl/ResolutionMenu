@@ -28,7 +28,7 @@ Then, for the change to take effect, either log out and back in or restart your 
 
 ## Installation
 
-Just fetch the latest ZIP from the [release section](https://github.com/robbertkl/ResolutionMenu/releases) section and put the extracted app into your Applications folder.
+Just fetch the latest ZIP from the [release section](https://github.com/robbertkl/ResolutionMenu/releases) and put the extracted app into your Applications folder.
 
 You might need to disable OS X Gatekeeper to run it: *System Preferences* > *Security & Privacy* > *General* tab > *Allow apps downloaded from: Anywhere*.
 
